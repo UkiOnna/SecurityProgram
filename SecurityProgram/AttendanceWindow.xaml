@@ -6,14 +6,31 @@
         xmlns:local="clr-namespace:SecurityProgram"
         mc:Ignorable="d"
         Title="AttendanceWindow" Name="attendanceWindow" Height="300" Width="500">
-    <Grid>
+    <!--<Grid>
         <DataGrid Name="DataContainer" HorizontalAlignment="Left" Height="222" Margin="10,37,0,0" VerticalAlignment="Top" Width="472" AutoGenerateColumns="True">
             <DataGrid.Columns>
 
             </DataGrid.Columns>
 
         </DataGrid>
-        <DatePicker Name="currentDate" HorizontalAlignment="Left" Margin="20,8,0,0" VerticalAlignment="Top" SelectedDateFormat="Short"/>
+        <DatePicker Name="currentDate" HorizontalAlignment="Left" Margin="20,8,0,0" VerticalAlignment="Top" SelectedDateFormat="Short"/>--><!--
 
+    </Grid>-->
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+        <DatePicker SelectedDateChanged="SelectedDateChanged" Grid.Row="0" Name="currentDate" Margin="0,0,338,0"/>
+        <DataGrid CurrentCellChanged="DataContainerCurrentCellChanged" Grid.Row="1" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" Name="DataContainer" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="first" IsReadOnly="True" Header="ФИО" Width="*" Binding="{Binding FIO}"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Должность" Width="*" Binding="{Binding Post}"/>
+                <DataGridCheckBoxColumn x:Name="checkBox"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

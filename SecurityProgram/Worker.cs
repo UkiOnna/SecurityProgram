@@ -11,10 +11,11 @@ namespace SecurityProgram
         //public Guid Id { get; private set; }
         public string FIO { get; set; }
         public string Post { get; set; }
-        public bool isComing { get; set; }
+        public Dictionary<string, bool> isWorked { get; set; }
+
         public Worker()
         {
-            isComing = false;
+            isWorked = new Dictionary<string, bool>();
         }
     }
     

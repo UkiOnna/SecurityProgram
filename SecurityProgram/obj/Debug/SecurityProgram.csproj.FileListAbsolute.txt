@@ -16,3 +16,21 @@ c:\users\сикировт\documents\visual studio 2017\Projects\SecurityProgram\
 c:\users\сикировт\documents\visual studio 2017\Projects\SecurityProgram\SecurityProgram\obj\Debug\SecurityProgram.pdb
 c:\users\сикировт\documents\visual studio 2017\Projects\SecurityProgram\SecurityProgram\obj\Debug\AttendanceWindow.g.cs
 c:\users\сикировт\documents\visual studio 2017\Projects\SecurityProgram\SecurityProgram\obj\Debug\AttendanceWindow.baml
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\bin\Debug\SecurityProgram.exe.config
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\bin\Debug\SecurityProgram.exe
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\bin\Debug\SecurityProgram.pdb
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram.csprojResolveAssemblyReference.cache
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\AttendanceWindow.g.cs
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\MainWindow.g.cs
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\WorkerList.g.cs
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\App.g.cs
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram_MarkupCompile.cache
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram_MarkupCompile.lref
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\AttendanceWindow.baml
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\MainWindow.baml
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\WorkerList.baml
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram.g.resources
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram.Properties.Resources.resources
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram.csproj.GenerateResource.Cache
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram.exe
+C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram.pdb
