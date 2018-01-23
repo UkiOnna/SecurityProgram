@@ -1,0 +1,18 @@
+﻿<Window x:Class="SecurityProgram.WorkerList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SecurityProgram"
+        mc:Ignorable="d"
+        Title="WorkerList" Name="workersWindow" Height="300" Width="500" Closed="WorkersWindowClosed">
+    <Grid>
+        <ListBox Name="ListWorkers" HorizontalAlignment="Left" Height="197" Margin="10,10,0,0" VerticalAlignment="Top" Width="472">
+        </ListBox>
+        <Button Name="DeleteButton" Content="Удалить" HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top" Width="75" Click="DeleteButtonClick"  />
+        <Button Name="AddButton" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,239,0,0" Click="AddButtonClick" />
+        <TextBox Name="AddFio" HorizontalAlignment="Left" Height="20" Margin="104,239,0,0" TextWrapping="Wrap" Text="ФИО" VerticalAlignment="Top" Width="217" GotMouseCapture="AddFioGotMouseCapture"/>
+        <TextBox Name="AddPost" HorizontalAlignment="Left" Height="20" Margin="373,239,0,0" TextWrapping="Wrap" Text="Должность" VerticalAlignment="Top" Width="109" GotMouseCapture="AddPostGotMouseCapture"/>
+        <Button Name="attendanceButton" Content="Посещаемость" HorizontalAlignment="Left" Margin="384,212,0,0" VerticalAlignment="Top" Width="98" Click="attendanceButtonClick"/>
+    </Grid>
+</Window>
