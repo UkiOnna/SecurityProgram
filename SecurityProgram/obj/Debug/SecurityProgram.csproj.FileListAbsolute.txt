@@ -34,3 +34,23 @@ C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\S
 C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram.csproj.GenerateResource.Cache
 C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram.exe
 C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\SecurityProgram.pdb
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\SecurityProgram.csprojResolveAssemblyReference.cache
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\MainWindow.g.cs
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\WorkerList.g.cs
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\App.g.cs
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\SecurityProgram_MarkupCompile.cache
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\SecurityProgram_MarkupCompile.lref
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\SecurityProgram.exe
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\SecurityProgram.pdb
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\bin\Debug\SecurityProgram.exe.config
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\bin\Debug\SecurityProgram.exe
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\bin\Debug\SecurityProgram.pdb
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\bin\Debug\Newtonsoft.Json.dll
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\bin\Debug\Newtonsoft.Json.xml
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\MainWindow.baml
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\WorkerList.baml
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\SecurityProgram.g.resources
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\SecurityProgram.Properties.Resources.resources
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\SecurityProgram.csproj.GenerateResource.Cache
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\MarkEmployeesWindow.g.cs
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\MarkEmployeesWindow.baml

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\obj\Debug\
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\obj\Debug\
 SecurityProgram
 none
 false
 DEBUG;TRACE
-C:\My Documents\Visual Studio 2017\Projects\Security\SecurityProgram\App.xaml
-31339793644
+C:\Users\АсылханА\Desktop\SecurityProgram-master\SecurityProgram\App.xaml
+3-807828393
 
-8-795230209
-13-1643599102
-AttendanceWindow.xaml;MainWindow.xaml;WorkerList.xaml;
+8-1165244170
+14-806301830
+MainWindow.xaml;MarkEmployeesWindow.xaml;WorkerList.xaml;
 
 False
 

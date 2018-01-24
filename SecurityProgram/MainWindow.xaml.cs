@@ -25,7 +25,6 @@ namespace SecurityProgram
             InitializeComponent();
             new WorkerList().Show();
             MainWin.Close();
-            
         }
     }
 }

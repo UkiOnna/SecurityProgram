@@ -1,0 +1,25 @@
+﻿<Window x:Class="SecurityProgram.MarkEmployeesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SecurityProgram"
+        mc:Ignorable="d"
+        Title="MarkEmployeesWindow" Height="400" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+        <DatePicker SelectedDateChanged="DatePickerSelectedDateChanged" Name="datePicker"/>
+        <DataGrid IsReadOnly="False" SelectedCellsChanged="DataGridSelectedCellsChanged" Name="dataGrid" AutoGenerateColumns="False" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn x:Name="checkBoxColumn"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Name}" Width="*" Header="Имя"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding LastName}" Width="*" Header="Фамилия"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding MidleName}" Width="*" Header="Отчество"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Position}" Width="*" Header="Должность"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

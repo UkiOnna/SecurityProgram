@@ -1,0 +1,1 @@
+[{"Name":"asdasd","LastName":"asdasd","MidleName":"asdasd","Position":"asdasd","IsWorked":{"24.01.2018":true,"17.01.2018":true,"05.01.2018":false,"15.01.2018":true,"13.01.2018":true}},{"Name":"asdasd","LastName":"asdasd","MidleName":"asdasd","Position":"asdasd","IsWorked":{"24.01.2018":true,"17.01.2018":true,"05.01.2018":false,"15.01.2018":true,"13.01.2018":false}}]

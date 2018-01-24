@@ -12,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
+using System.Collections.ObjectModel;
 
 namespace SecurityProgram
 {
@@ -20,97 +22,100 @@ namespace SecurityProgram
     /// </summary>
     public partial class WorkerList : Window
     {
-        private List<Worker> workers;
-
+        private ObservableCollection<Employee> employees;
+        private string pathToFile;
         public WorkerList()
         {
             InitializeComponent();
-            workers = new List<Worker>();
-            ReadFiles();
-            //Worker worker = new Worker();
-            //worker.FIO = "Алексей Епта Иванович";
-            //worker.Post = "Отреченный";
-            //workers.Add(worker);
-            foreach (Worker c in workers)
+            const string FILE_NAME = "Employees.txt";
+            pathToFile = Directory.GetCurrentDirectory() + @"\" + FILE_NAME;
+            using(FileStream fileStream = new FileStream(pathToFile,FileMode.OpenOrCreate))
             {
-                ListWorkers.Items.Add(c.FIO + " - " + c.Post);
-            }
-
-
-
-        }
-
-        private void WorkersWindowClosed(object sender, EventArgs e)
-        {
-            string path = Directory.GetCurrentDirectory() + "/workers.txt";
-            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Create)))
-            {
-                // записываем в файл значение каждого поля структуры
-                foreach (Worker s in workers)
+                using(StreamReader stream = new StreamReader(fileStream))
                 {
-                    writer.Write(s.FIO);
-                    writer.Write(s.Post);
+                    using(JsonTextReader reader = new JsonTextReader(stream))
+                    {
+                        JsonSerializer serializer = new JsonSerializer();
+                        employees = serializer.Deserialize<ObservableCollection<Employee>>(reader);
+                        if (employees == null) employees = new ObservableCollection<Employee>();
+                    }
+                }
+            }
+            workersList.ItemsSource = employees;
+        }
+        private bool AllFieldsAreFull()
+        {
+            return nameTextBox.Text != "" && lastNameTextBox.Text != "" && midleNameTextBox.Text != "" && positionTextBox.Text != "";
+        }
+        private void WorkersListSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (workersList.SelectedItem != null)
+            {
+                nameTextBox.Text = (workersList.SelectedItem as Employee).Name;
+                lastNameTextBox.Text = (workersList.SelectedItem as Employee).LastName;
+                midleNameTextBox.Text = (workersList.SelectedItem as Employee).MidleName;
+                positionTextBox.Text = (workersList.SelectedItem as Employee).Position;
+            }
+        }
+        private void SaveEmployees()
+        {
+            using(FileStream fileStream = new FileStream(pathToFile,FileMode.Create))
+            {
+                using(StreamWriter stream = new StreamWriter(fileStream))
+                {
+                    using(JsonTextWriter writer = new JsonTextWriter(stream))
+                    {
+                        JsonSerializer serializer = new JsonSerializer();
+                        serializer.Serialize(writer, employees);
+                    }
                 }
             }
         }
-
-        private void AddPostGotMouseCapture(object sender, MouseEventArgs e)
-        {
-            AddPost.Text = null;
-        }
-
-        private void AddFioGotMouseCapture(object sender, MouseEventArgs e)
-        {
-            AddFio.Text = null;
-        }
-
         private void AddButtonClick(object sender, RoutedEventArgs e)
         {
-            if (AddPost.Text != null && AddPost.Text != "Должность" && AddFio.Text != null && AddFio.Text != "ФИО")
+            if (AllFieldsAreFull())
             {
-                Worker worker = new Worker();
-                worker.FIO = AddFio.Text;
-                worker.Post = AddPost.Text;
-                workers.Add(worker);
-                ListWorkers.Items.Add(worker.FIO + " - " + worker.Post);
+                employees.Add(new Employee()
+                {
+                    Name = nameTextBox.Text,
+                    LastName = lastNameTextBox.Text,
+                    MidleName = midleNameTextBox.Text,
+                    Position = positionTextBox.Text
+                });
+                SaveEmployees();
             }
             else
             {
-                MessageBox.Show("Вы неправильно ввели данные работника");
+                MessageBox.Show("Необходимо заполнить все поля.");
             }
         }
-
         private void DeleteButtonClick(object sender, RoutedEventArgs e)
         {
-            int index = ListWorkers.SelectedIndex;
-            if (index != -1)
+            if (workersList.SelectedItem != null)
             {
-                workers.RemoveAt(index);
-                ListWorkers.Items.RemoveAt(index);
+                employees.Remove(workersList.SelectedItem as Employee);
+                SaveEmployees();
             }
         }
-
-        private void ReadFiles()
+        private void UpdateButtonClick(object sender, RoutedEventArgs e)
         {
-            string path = Directory.GetCurrentDirectory() + "/workers.txt";
-            using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open)))
+            if (workersList.SelectedItem != null)
             {
+                (workersList.SelectedItem as Employee).Name = nameTextBox.Text;
+                (workersList.SelectedItem as Employee).LastName = lastNameTextBox.Text;
+                (workersList.SelectedItem as Employee).MidleName = midleNameTextBox.Text;
+                (workersList.SelectedItem as Employee).Position = positionTextBox.Text;
 
-                while (reader.PeekChar() > -1)
-                {
-                    Worker temp = new Worker();
-                    temp.FIO = reader.ReadString();
-                    temp.Post = reader.ReadString();
-                    workers.Add(temp);
-                }
+                workersList.ItemsSource = null;
+                workersList.ItemsSource = employees;
+
+                SaveEmployees();
             }
         }
-
-        private void attendanceButtonClick(object sender, RoutedEventArgs e)
+        private void MarkEmployeesButtonClick(object sender, RoutedEventArgs e)
         {
-            new AttendanceWindow(workers).Show();
-            workersWindow.Close();
-            
+            new MarkEmployeesWindow(employees).Show();
+            Close();
         }
     }
 }
